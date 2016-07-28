@@ -5,4 +5,4 @@ line="$(ifconfig | grep broadcast)"
 ipaddress="$(echo "${line}" | awk -v OFS="\n" '{ print $2 }')"
 
 #use it to run server
-java -jar stubby4j-3.3.0.jar -d myserver.yaml -l "${ipaddress}"
+java -jar binary/stubby4j-3.3.0.jar -d myserver.yaml -l "${ipaddress}"
