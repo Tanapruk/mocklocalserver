@@ -1,0 +1,20 @@
+- request:
+        method: GET
+        url: /service/simple
+
+  response:
+        status: 200
+        latency: 1000
+        headers:
+            content-type: application/json
+        file: response/simple200.json
+- request:
+         method: GET
+         url: /service/first
+
+  response:
+         status: 200
+         latency: 3000
+         headers:
+             content-type: application/json
+         file: response/first200.json
