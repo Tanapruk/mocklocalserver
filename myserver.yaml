@@ -3,18 +3,26 @@
         url: /service/simple
 
   response:
-        status: 200
-        latency: 1000
-        headers:
+        - status: 200
+          latency: 1000
+          headers:
+              content-type: application/json;charset=utf-8
+          file: response/simple200.json
+        - status: 500
+          headers:
             content-type: application/json
-        file: response/simple200.json
+          file: response/simple500.json
+        - status: 404
+          headers:
+            content-type: application/json
+          body: 
 - request:
          method: GET
-         url: /service/first
+         url: /service/profile
 
   response:
          status: 200
-         latency: 3000
+         latency: 1200
          headers:
-             content-type: application/json
-         file: response/first200.json
+             content-type: application/json;charset=utf-8
+         file: response/profile200.json
